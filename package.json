@@ -1,0 +1,29 @@
+{
+  "name": "myteacher2-portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vueuse/core": "^13.3.0",
+    "@vueuse/motion": "^3.0.3",
+    "lucide-vue-next": "^0.514.0",
+    "marked": "^15.0.12",
+    "swiper": "^11.2.8",
+    "vue": "^3.5.13",
+    "vue-i18n": "^12.0.0-alpha.2",
+    "vue-router": "^4.5.1",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.5",
+    "tailwindcss": "^4.1.10",
+    "vite": "^6.2.0"
+  }
+}

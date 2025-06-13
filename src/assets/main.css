@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-color: #3B82F6;
+    --secondary-color: #10B981;
+    --accent-color: #8B5CF6;
+  }
+
+  .dark {
+    --primary-color: #60A5FA;
+    --secondary-color: #34D399;
+    --accent-color: #A78BFA;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
