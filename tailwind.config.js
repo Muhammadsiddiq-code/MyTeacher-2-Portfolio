@@ -43,9 +43,22 @@ module.exports = {
             700: '#6d28d9',
             800: '#5b21b6',
             900: '#4c1d95',
+            950: '#3b0764',  // Qo'shimcha to'q rang
           }
+        },
+        fontFamily: {
+          sans: ['Montserrat', 'sans-serif'],
+        },
+        boxShadow: {
+          'custom': '0 4px 20px -2px rgba(0, 0, 0, 0.1)',
+        },
+        animation: {
+          'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         }
       },
     },
-    plugins: [],
+    plugins: [
+      require('@tailwindcss/typography'),  // Markdown uchun
+      require('@tailwindcss/forms'),       // Form elementlari uchun
+    ],
   }

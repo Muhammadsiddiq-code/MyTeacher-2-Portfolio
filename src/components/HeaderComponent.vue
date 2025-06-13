@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <nav class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50 transition-colors duration-300">
       <div class="container mx-auto px-4 py-3">
         <div class="flex justify-between items-center">
@@ -14,7 +14,6 @@
           </div>
           
           <div class="flex items-center space-x-4">
-            <!-- Language Selector -->
             <div class="relative">
               <button @click="toggleLanguageDropdown" class="flex items-center text-gray-700 dark:text-gray-300">
                 <span class="mr-1">{{ languageLabels[language] }}</span>
@@ -29,13 +28,11 @@
               </div>
             </div>
             
-            <!-- Theme Toggle -->
             <button @click="$emit('toggle-theme')" class="text-gray-700 dark:text-gray-300">
               <SunIcon v-if="isDarkMode" class="w-5 h-5" />
               <MoonIcon v-else class="w-5 h-5" />
             </button>
             
-            <!-- Mobile Menu Button -->
             <button @click="toggleMobileMenu" class="md:hidden text-gray-700 dark:text-gray-300">
               <MenuIcon v-if="!isMobileMenuOpen" class="w-6 h-6" />
               <XIcon v-else class="w-6 h-6" />
@@ -43,7 +40,6 @@
           </div>
         </div>
         
-        <!-- Mobile Menu -->
         <div v-if="isMobileMenuOpen" class="md:hidden mt-4 pb-4">
           <router-link v-for="item in menuItems" :key="item.path" :to="item.path" 
             @click="isMobileMenuOpen = false"
@@ -107,4 +103,33 @@
     color: var(--primary-color);
     font-weight: 500;
   }
-  </style>
+  </style> -->
+
+
+
+
+
+
+
+
+
+
+  <template>
+    <!-- ... -->
+    <!-- Theme Toggle -->
+    <button @click="themeStore.toggleDarkMode" class="text-gray-700 dark:text-gray-300">
+      <sun-icon v-if="themeStore.isDarkMode" class="w-5 h-5" />
+      <moon-icon v-else class="w-5 h-5" />
+    </button>
+    <!-- ... -->
+  </template>
+  
+  <script setup>
+  import { ref } from 'vue'
+  import { useI18n } from 'vue-i18n'
+  import { useThemeStore } from '@/stores/theme'
+  import { SunIcon, MoonIcon, MenuIcon, XIcon, ChevronDownIcon } from 'lucide-vue-next'
+  
+  const themeStore = useThemeStore()
+  // ...
+  </script>
